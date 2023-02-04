@@ -1,0 +1,103 @@
+{
+  "technologies": [{
+    "type": "backend",
+    "name": "Backend",
+    "list": [{
+      "type": "php",
+      "name": "PHP",
+      "url": "https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white"
+    },
+    {
+      "type": "nodejs",
+      "name": "NodeJS",
+      "url": "https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"
+    },
+    {
+      "type": "java",
+      "name": "Java",
+      "url": "https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white"
+    },
+    {
+      "type": "c#",
+      "name": "C#",
+      "url": "https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white"
+    }]
+  },
+  {
+    "type": "frontend",
+    "name": "Frontend",
+    "list": [{
+      "type": "angular",
+      "name": "Angular",
+      "url": "https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white"
+    },
+    {
+      "type": "react",
+      "name": "React",
+      "url": "https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"
+    },
+    {
+      "type": "vuejs",
+      "name": "Vue.js",
+      "url": "https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D"
+    }]
+  },
+  {
+    "type": "database",
+    "name": "Database",
+    "list": [{
+      "type": "mysql",
+      "name": "MySQL",
+      "url": "https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"
+    },
+    {
+      "type": "mongodb",
+      "name": "MongoDB",
+      "url": "https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white"
+    },
+    {
+      "type": "postgres",
+      "name": "Postgres",
+      "url": "https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white"
+    }]
+  },
+  {
+    "type": "frameworks",
+    "name": "Frameworks",
+    "list": [{
+      "type": "laravel",
+      "name": "Laravel",
+      "url": "https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white"
+    },
+    {
+      "type": "symfony",
+      "name": "Symfony",
+      "url": "https://img.shields.io/badge/symfony-%23000000.svg?style=for-the-badge&logo=symfony&logoColor=white"
+    },
+    {
+      "type": "expressjs",
+      "name": "Express.js",
+      "url": "https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB"
+    },
+    {
+      "type": "fastify",
+      "name": "Fastify",
+      "url": "https://img.shields.io/badge/fastify-%23000000.svg?style=for-the-badge&logo=fastify&logoColor=white"
+    },
+    {
+      "type": "nextjs",
+      "name": "Next JS",
+      "url": "https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white"
+    },
+    {
+      "type": "nuxtjs",
+      "name": "Nuxt.js",
+      "url": "https://img.shields.io/badge/Nuxt-002E3B?style=for-the-badge&logo=nuxtdotjs&logoColor=#00DC82"
+    },
+    {
+      "type": "dotnet",
+      "name": ".Net",
+      "url": "https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white"
+    }]
+  }]
+}
