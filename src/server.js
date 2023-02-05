@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const { build } = require("./app.js");
 
 const app = build({ logger: true });

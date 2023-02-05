@@ -1,4 +1,4 @@
-# CV API
+# Profile API
 
 An API to provide CV data.
 

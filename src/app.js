@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const fastify = require('fastify');
 const initRouting = require('./config/routing.js');
 const initCache = require('./config/cache.js');
