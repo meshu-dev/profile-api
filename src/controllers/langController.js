@@ -10,9 +10,9 @@ const getUsage = async (request, reply) => {
 
 const getList = async (request, reply) => {
   const statusCode = 200;
-  const response = await getLangList();
+  const langLists = await getLangList();
 
-  htmlResponse(reply, statusCode, response);
+  return reply.view("/templates/lang-lists.ejs", { langLists: langLists });
 };
 
 module.exports = { getUsage, getList };

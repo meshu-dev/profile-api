@@ -1,4 +1,7 @@
+const axios = require('axios');
 const fs = require('fs');
+
+const httpClient = axios.create();
 
 const getTags = async () => {
   try {
@@ -10,6 +13,31 @@ const getTags = async () => {
   }
 };
 
+const getHtmlTags = async () => {
+  const tagData = await getTags();
+  const technologies = tagData['technologies'];
+  const imgTags = [];
+
+  for (const technology of technologies) {
+    const techTitle = technology['name'];
+    const techType = technology['type'];
+    const tagList = technology['list'];
+
+    const techTags = [];
+
+    for (const tag of tagList) {
+      const tagType = tag['type'];
+      const url = tag['url'];
+      const { data } = await httpClient.get(url);
+
+      techTags.push(data);
+    }
+    imgTags.push({ title: techTitle, list: techTags});
+  }
+  return imgTags;
+};
+
 module.exports = {
-  getTags
+  getTags,
+  getHtmlTags
 };

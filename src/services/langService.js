@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { getTags } = require('./tagService.js');
+const { getHtmlTags } = require('./tagService.js');
 
 const httpClient = axios.create();
 
@@ -10,11 +10,8 @@ const getLangStats = async () => {
 };
 
 const getLangList = async () => {
-  const url = await getTags();
-  
-  console.log('TAG', url);
-
-  return 'AAA';
+  const tags = await getHtmlTags();
+  return tags;
 };
 
 module.exports = {
