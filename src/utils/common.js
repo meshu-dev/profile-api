@@ -1,10 +1,10 @@
-const jsonResponse = (reply, statusCode, response) => {
+const jsonResponse = (reply, response, statusCode = 200) => {
   reply.code(statusCode)
        .header('Content-Type', 'application/json; charset=utf-8')
        .send(response);
 };
 
-const htmlResponse = (reply, statusCode, response) => {
+const htmlResponse = (reply, response, statusCode = 200) => {
   reply.code(statusCode)
        .header('Content-Type', 'text/html; charset=utf-8')
        .send(response);
