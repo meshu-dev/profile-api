@@ -10,10 +10,10 @@ const getCache = async (key) => {
   await db.loadDatabaseAsync({});
 
   const cache = db.getCollection('cache');
-  const result = cache.findOne({ name: key });
+  const result = cache.findOne({ key });
 
-  if (result && result['content']) {
-    return result['content'];
+  if (result && result['value']) {
+    return result['value'];
   }
   return false;
 };
@@ -24,8 +24,8 @@ const setCache = async (key, data) => {
   const cache = db.getCollection('cache');
 
   const params = {
-    name: key,
-    content: data
+    key,
+    value: data
   };
 
   cache.insert(params);
@@ -33,7 +33,36 @@ const setCache = async (key, data) => {
   db.saveDatabase();
 };
 
+const clearCache = async (key) => {
+  await db.loadDatabaseAsync({});
+
+  const cache = db.getCollection('cache');
+  cache.findOne({ key }).remove();
+
+  db.saveDatabase();
+};
+
+const clearCaches = async (keys) => {
+  await db.loadDatabaseAsync({});
+
+  const cache = db.getCollection('cache');
+
+  for (const key of keys) {
+    let result = cache.findOne({ key });
+
+    console.log(`Cache key: ${key} | result: ${result}`);
+
+    if (result) {
+      cache.remove(result);
+    }
+  }
+
+  db.saveDatabase();
+};
+
 module.exports = {
   getCache,
-  setCache
+  setCache,
+  clearCache,
+  clearCaches
 };
