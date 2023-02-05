@@ -2,7 +2,7 @@ const { jsonResponse } = require("../utils/common.js");
 
 const index = async (request, reply) => {
   const response = {
-    message: 'API is running'
+    message: 'Profile API is running'
   };
 
   jsonResponse(reply, response);
