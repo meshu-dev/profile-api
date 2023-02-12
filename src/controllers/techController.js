@@ -17,15 +17,21 @@ const getUsage = async (request, reply) => {
 };
 
 const getList = async (request, reply) => {
-  const tagListHtml = await getCache('tagList');
+  const includeDesc = request.query.desc === 'true' ? true : false;
+  const cacheKey = includeDesc === true ? 'tagDescList' : 'tagList';
+
+  const tagListHtml = await getCache(cacheKey);
 
   if (tagListHtml) {
     htmlResponse(reply, tagListHtml);
   } else {
     const techLists = await getTechList();
-    const tagListHtml = await getHtml('tech-lists.ejs', { techLists: techLists });
+    const tagListHtml = await getHtml(
+      'tech-lists.ejs',
+      { includeDesc, techLists }
+    );
 
-    await setCache('tagList', tagListHtml);
+    await setCache(cacheKey, tagListHtml);
   
     htmlResponse(reply, tagListHtml);
   }
