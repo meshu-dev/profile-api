@@ -10,7 +10,14 @@ const htmlResponse = (reply, response, statusCode = 200) => {
        .send(response);
 };
 
+const svgResponse = (reply, response, statusCode = 200) => {
+  reply.code(statusCode)
+       .header('Content-Type', 'image/svg+xml')
+       .send(response);
+};
+
 module.exports = {
   jsonResponse,
-  htmlResponse
+  htmlResponse,
+  svgResponse
 };

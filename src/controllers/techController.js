@@ -1,4 +1,4 @@
-const { htmlResponse } = require("../utils/common.js");
+const { htmlResponse, svgResponse } = require("../utils/common.js");
 const { getHtml } = require("../utils/template.js");
 const { getCache, setCache } = require("../utils/cache.js");
 const { getTechStats, getTechList } = require('../services/techService.js');
@@ -7,12 +7,12 @@ const getUsage = async (request, reply) => {
   const langUsageHtml = await getCache('langUsage');
 
   if (langUsageHtml) {
-    htmlResponse(reply, langUsageHtml);
+    svgResponse(reply, langUsageHtml);
   } else {
     const langUsageHtml = await getTechStats();
     await setCache('langUsage', langUsageHtml);
   
-    htmlResponse(reply, langUsageHtml);
+    svgResponse(reply, langUsageHtml);
   }
 };
 
