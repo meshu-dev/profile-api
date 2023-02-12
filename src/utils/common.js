@@ -16,8 +16,15 @@ const svgResponse = (reply, response, statusCode = 200) => {
        .send(response);
 };
 
+const pngResponse = (reply, response, statusCode = 200) => {
+  reply.code(statusCode)
+       .header('Content-Type', 'image/png')
+       .send(response);
+};
+
 module.exports = {
   jsonResponse,
   htmlResponse,
-  svgResponse
+  svgResponse,
+  pngResponse
 };
