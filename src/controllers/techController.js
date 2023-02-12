@@ -1,7 +1,7 @@
 const { htmlResponse } = require("../utils/common.js");
 const { getHtml } = require("../utils/template.js");
 const { getCache, setCache } = require("../utils/cache.js");
-const { getLangStats, getLangList } = require('../services/langService.js');
+const { getLangStats, getLangList } = require('../services/techService.js');
 
 const getUsage = async (request, reply) => {
   const langUsageHtml = await getCache('langUsage');

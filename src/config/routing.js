@@ -1,10 +1,12 @@
 const indexRoutes = require('./../routes/index.js');
-const langRoutes = require('./../routes/lang.js');
+const infoRoutes = require('./../routes/info.js');
+const langRoutes = require('./../routes/tech.js');
 const statRoutes = require('./../routes/stat.js');
 
 const initRouting = (app) => {
   app.register(indexRoutes);
-  app.register(langRoutes, { prefix: '/lang' });
+  app.register(infoRoutes, { prefix: '/info' });
+  app.register(langRoutes, { prefix: '/tech' });
   app.register(statRoutes, { prefix: '/stats' });
 };
 

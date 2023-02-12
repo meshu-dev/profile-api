@@ -20,13 +20,11 @@ const getHtmlTags = async () => {
 
   for (const technology of technologies) {
     const techTitle = technology['name'];
-    const techType = technology['type'];
     const tagList = technology['list'];
 
     const techTags = [];
 
     for (const tag of tagList) {
-      const tagType = tag['type'];
       const url = tag['url'];
       const { data } = await httpClient.get(url);
 

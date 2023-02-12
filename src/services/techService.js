@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { getHtmlTags } = require('./tagService.js');
+const { getHtmlTags } = require('./techTagService.js');
 
 const httpClient = axios.create();
 

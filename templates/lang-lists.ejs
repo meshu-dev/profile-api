@@ -1,10 +1,23 @@
-<% if (langLists) { %>
-  <% for (const technology of langLists) { %>
-    <div style="font-weight: bold; font-weight: 14px; margin-bottom: 5px"><%- technology['title'] %></div>
-    <div style="margin-bottom: 10px">
-      <% for (const tag of technology['list']) { %>
-        <span><%- tag %></span>
-      <% } %>
-    </div>
+<style>
+  .lang-list-title { 
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .lang-list-items {
+    margin-bottom: 10px;
+  }
+</style>
+<div>
+  <div style="display: none">These are the technologies that I've worked with both commercially and in personal projects.</div>
+  <% if (langLists) { %>
+    <% for (const technology of langLists) { %>
+      <div class="lang-list-title"><%- technology['title'] %></div>
+      <div class="lang-list-items">
+        <% for (const tag of technology['list']) { %>
+          <span><%- tag %></span>
+        <% } %>
+      </div>
+    <% } %>
   <% } %>
-<% } %>
+</div>
