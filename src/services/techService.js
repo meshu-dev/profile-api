@@ -3,18 +3,17 @@ const { getHtmlTags } = require('./techTagService.js');
 
 const httpClient = axios.create();
 
-const getLangStats = async () => {
+const getTechStats = async () => {
   const { data } = await httpClient.get(process.env.LANG_STATS_URL);
-  
   return data;
 };
 
-const getLangList = async () => {
+const getTechList = async () => {
   const tags = await getHtmlTags();
   return tags;
 };
 
 module.exports = {
-  getLangStats,
-  getLangList
+  getTechStats,
+  getTechList
 };
