@@ -22,8 +22,8 @@ const getList = async (request, reply) => {
   if (tagListHtml) {
     htmlResponse(reply, tagListHtml);
   } else {
-    const langLists = await getTechList();
-    const tagListHtml = await getHtml('lang-lists.ejs', { langLists: langLists });
+    const techLists = await getTechList();
+    const tagListHtml = await getHtml('tech-lists.ejs', { techLists: techLists });
 
     await setCache('tagList', tagListHtml);
   
